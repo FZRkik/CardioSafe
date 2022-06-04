@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="487.0" prefWidth="455.0" style="-fx-background-color: #3f3f45;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashbord.Controllers.Login">
+    <children>
+        <TextField fx:id="username" layoutX="209.0" layoutY="159.0" prefHeight="25.0" prefWidth="183.0" promptText="Nom de l'utilisateur" />
+        <TextField fx:id="passwd" layoutX="208.0" layoutY="231.0" prefHeight="25.0" prefWidth="183.0" promptText="Mot de passe " />
+        <Text fill="WHITE" layoutX="210.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom d'utilisateur : " />
+        <Text fill="WHITE" layoutX="210.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe :  " />
+        <Button fx:id="login" layoutX="317.0" layoutY="307.0" mnemonicParsing="false" onAction="#verifyconnectedUser" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #ffb300;" text="Log in" />
+        <ImageView fitHeight="150.0" fitWidth="270.0" layoutX="34.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../imgs/unlock.png" />
+            </image>
+        </ImageView>
+      <Label fx:id="warning" layoutX="35.0" layoutY="268.0" prefHeight="31.0" prefWidth="357.0" textFill="#e42626" />
+    </children>
+</AnchorPane>

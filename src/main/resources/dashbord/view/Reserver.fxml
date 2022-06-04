@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="561.0" prefWidth="432.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashbord.Controllers.Reserver">
+   <children>
+      <VBox layoutX="-6.0" prefHeight="561.0" prefWidth="460.0">
+         <children>
+            <Label prefHeight="110.0" prefWidth="460.0" style="-fx-background-color: #062454;" styleClass="pane" stylesheets="@../css/style.css" text="Reserver un rendez-vous :" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="20.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="58.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="177.0" text="Nom de patient :">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="nom_filed" />
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="177.0" text="Prénom de patient :">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="prenom_filed" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="177.0" text="Type de consultation :">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="type_box" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="177.0" text="Heure de Réservation :">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="heure_box" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <Pane prefHeight="137.0" prefWidth="460.0">
+               <children>
+                  <Button layoutX="198.0" layoutY="54.0" mnemonicParsing="false" onAction="#reserver" prefHeight="30.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Reserver" />
+                  <Button fx:id="btn_anuler" layoutX="309.0" layoutY="54.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="66.0" stylesheets="@../css/style.css" text="Annuler" />
+                  <Label fx:id="msg" layoutX="92.0" layoutY="20.0" prefHeight="17.0" prefWidth="213.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashbord.Controllers.Paiements">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="97.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/dashbord.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin></ImageView>
+            <Label text="CardioSafe" textFill="#ffe400">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <Button alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showAcceuil" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Acceuil" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnpatients" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showPatients" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Patients">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnConsultations" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showConsultation" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Consultations">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnDashbord" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showDashController" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Dashbord">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnPaiements" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Paiements">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Close">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="256.0" prefHeight="576.0" prefWidth="794.0" style="-fx-background-color: #dce3de;">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="794.0" style="-fx-background-color: #575958;">
+               <children>
+                  <Label layoutX="36.0" layoutY="11.0" text="Paiements" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <VBox prefHeight="516.0" prefWidth="401.0">
+               <children>
+                  <HBox prefHeight="73.0" prefWidth="794.0">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="224.0" text="Historique des paiements :" textAlignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txt_filed" />
+                        <Button fx:id="btn_find" mnemonicParsing="false" onAction="#rechercher" prefHeight="25.0" prefWidth="86.0" stylesheets="@../css/style.css" text="Rechercher">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_effectuer" mnemonicParsing="false" onAction="#effectuer_paiement" prefHeight="25.0" prefWidth="157.0" stylesheets="@../css/style.css" text="Ajouter Paiement">
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="419.0" prefWidth="794.0">
+                     <children>
+                        <TableView fx:id="table" prefHeight="419.0" prefWidth="603.0" stylesheets="@../css/style.css">
+                          <columns>
+                              <TableColumn fx:id="col_id" prefWidth="53.0" text="N°" />
+                            <TableColumn fx:id="col_patient" prefWidth="160.0" text="Patient" />
+                            <TableColumn fx:id="col_DatePaiement" prefWidth="160.0" text="Date de paiement" />
+                              <TableColumn fx:id="col_montant" prefWidth="104.0" text="Montant" />
+                              <TableColumn fx:id="col_credit" minWidth="0.0" prefWidth="92.0" text="Crédit" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </TableView>
+                        <Pane prefHeight="419.0" prefWidth="225.0">
+                           <children>
+                              <Button alignment="TOP_LEFT" layoutX="32.0" layoutY="280.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="Modifier">
+                                 <graphic>
+                                    <ImageView fx:id="btn_modify" fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/Modify.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="32.0" layoutY="193.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="Supprimer">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="32.0" layoutY="108.0" mnemonicParsing="false" onAction="#refreshScreen" prefHeight="38.0" prefWidth="124.0" text="Actualiser">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/img_2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
